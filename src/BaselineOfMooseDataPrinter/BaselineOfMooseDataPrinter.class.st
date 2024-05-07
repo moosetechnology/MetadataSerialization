@@ -11,5 +11,5 @@ BaselineOfMooseDataPrinter >> baseline: spec [
 	spec for: #common do: [
 		spec
 			package: 'Moose-Data-Printer';
-			package: 'Moose-Data-Printer-Tests']
+			package: 'Moose-Data-Printer-Tests' with: [ spec requires: 'Moose-Data-Printer' ]]
 ]
