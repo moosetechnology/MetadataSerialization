@@ -1,6 +1,6 @@
 Class {
 	#name : #BaselineOfMooseDataPrinter,
-	#superclass : #Object,
+	#superclass : #BaselineOf,
 	#category : #BaselineOfMooseDataPrinter
 }
 
