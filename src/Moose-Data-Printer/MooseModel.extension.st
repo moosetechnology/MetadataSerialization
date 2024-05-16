@@ -7,14 +7,19 @@ MooseModel >> exportMetadataOn:aStream [
 ]
 
 { #category : #'*Moose-Data-Printer' }
-MooseModel >> exportTo: aStream usingPrinter: aPrinter [
-	"self exportMetadatatoStreamusingPrinter"
-	self exportMetadataOn:aStream.
+MooseModel >> exportMetadataTo: aStream usingPrinter: aPrinter metadata: aMetadata [
 
-	self
-		exportWithMetamodel: self metamodel
-		to: aStream
-		usingPrinter: aPrinter
+	| printer |
+	printer := FMJSONPrinter on: aStream.
+
+	aStream nextPutAll: '{'.
+	printer inProperty: 'modelName' do: [ printer primitive: self name ].
+	aStream nextPutAll: ', '.
+	printer
+		inProperty: 'modelClass'
+		do: [ printer primitive: self className ].
+	aStream nextPut: $}.
+	aStream cr
 ]
 
 { #category : #'*Moose-Data-Printer' }
