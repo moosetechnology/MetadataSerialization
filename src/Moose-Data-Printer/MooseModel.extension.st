@@ -7,7 +7,7 @@ MooseModel >> exportMetadataOn:aStream [
 ]
 
 { #category : #'*Moose-Data-Printer' }
-MooseModel >> exportMetadataTo: aStream usingPrinter: aPrinter metadata: aMetadata [
+MooseModel >> exportMetadataUsingPrinter: aPrinter metadata: aMetadata [
 
 	aPrinter 
         printEntityOpener;
