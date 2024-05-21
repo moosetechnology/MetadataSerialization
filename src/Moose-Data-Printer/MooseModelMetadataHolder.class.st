@@ -17,6 +17,12 @@ MooseModelMetadataHolder >> mooseModel: aMooseModel [
 ]
 
 { #category : #accessing }
+MooseModelMetadataHolder >> mooseModelClassName [
+
+	^ mooseModel className
+]
+
+{ #category : #accessing }
 MooseModelMetadataHolder >> mooseModelName [
 ^ mooseModel name
 	
